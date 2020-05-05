@@ -2,7 +2,23 @@ class LengthOfLastWord
 {
     private fun lengthOfLastWord(s: String): Int
     {
-        return if (s.replace(" ", "").isEmpty()) 0 else s.split(" ").filter { it.isNotEmpty() }.reversed()[0].length
+        val lengthOfString = s.length
+
+        var length = 0
+
+        for(index in lengthOfString - 1 downTo 0)
+        {
+            if (s[index].isWhitespace() && length > 0)
+            {
+                break
+            }
+            else if (!s[index].isWhitespace())
+            {
+                length++
+            }
+        }
+
+        return length
     }
 
     fun test(): Boolean
