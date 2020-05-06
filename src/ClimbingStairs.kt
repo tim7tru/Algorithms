@@ -27,9 +27,13 @@ class ClimbingStairs
         val testThree = 1
         val testThreeAns = 1
 
+        val testFour = 2
+        val testFourAns = 2
+
         return climbingStairs(testOne) == testOneAns &&
                 climbingStairs(testTwo) == testTwoAns &&
-                climbingStairs(testThree) == testThreeAns
+                climbingStairs(testThree) == testThreeAns &&
+                climbingStairs(testFour) == testFourAns
     }
 }
 
